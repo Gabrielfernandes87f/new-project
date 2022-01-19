@@ -15,7 +15,9 @@ class CreateTestimonialsTable extends Migration
     {
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')
+            ->constrained()
+            ->onDelete('cascade');
             $table->string('image')->nullable();
             $table->string("category");
             $table->string("name");

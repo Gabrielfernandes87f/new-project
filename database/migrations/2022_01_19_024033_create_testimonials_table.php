@@ -18,11 +18,11 @@ class CreateTestimonialsTable extends Migration
             $table->foreignId('user_id')
             ->constrained()
             ->onDelete('cascade');
-            $table->string('image')->nullable();
-            $table->string("category");
             $table->string("name");
-            $table->text('description');
-            $table->string("price");
+            $table->string('image_testimonial')->nullable();
+            $table->string('profissao')->nullable();
+            $table->text('depoimento');
+            $table->string("instagram")->nullable();
             $table->timestamps();
         });
     }

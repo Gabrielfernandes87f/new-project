@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Event;
+use App\Models\Testimonial;
+use App\Models\Curriculo;
+use App\Models\Certificate;
+use App\Models\Album;
+use App\Models\Gabriel;
 use App\Models\User;
 
 class EventController extends Controller
 {
-    
-    public function index() {
+
+    public function index(Request $request) {
 
         $search = request('search');
 
@@ -22,9 +27,18 @@ class EventController extends Controller
 
         } else {
             $events = Event::all();
-        }        
-    
-        return view('welcome',['events' => $events, 'search' => $search]);
+        }
+
+       // $testimonial = new Testimonial();
+
+        $testimonials = Testimonial::all();
+        $curriculos = Curriculo::all();
+        $certificates = Certificate::all();
+        $albums = Album::all();
+        $gabriels = Gabriel::all();
+
+
+        return view('welcome', compact('events', 'search', 'testimonials', 'curriculos', 'certificates', 'gabriels', 'albums'));
 
     }
 
@@ -89,7 +103,7 @@ class EventController extends Controller
         $eventOwner = User::where('id', $event->user_id)->first()->toArray();
 
         return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner, 'hasUserJoined' => $hasUserJoined]);
-        
+
     }
 
     public function dashboard() {
@@ -100,7 +114,7 @@ class EventController extends Controller
 
         $eventsAsParticipant = $user->eventsAsParticipant;
 
-        return view('events.dashboard', 
+        return view('events.dashboard',
             ['events' => $events, 'eventsasparticipant' => $eventsAsParticipant]
         );
 

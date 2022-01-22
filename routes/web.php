@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\DepoimentoController;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\CurriculoController;
+use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\TestimonialController;
 
 Route::middleware(['auth', 'second'])->group(function () {
@@ -40,6 +42,6 @@ Route::post('/events/join/{id}', [EventController::class, 'joinEvent'])->middlew
 Route::delete('/events/leave/{id}', [EventController::class, 'leaveEvent'])->middleware('auth');
 
 
-Route::get('/depoimentos/create', [DepoimentoController::class, 'createDepoimento'])->middleware('auth');
+ // Route::get('/depoimentos/create', [DepoimentoController::class, 'createDepoimento'])->middleware('auth');
 
-Route::get('/main-page', [TestimonialController::class, 'index']);
+Route::get('/testimonial', [TestimonialController::class, 'store']);

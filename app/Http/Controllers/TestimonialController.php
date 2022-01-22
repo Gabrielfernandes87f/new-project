@@ -59,7 +59,7 @@ class TestimonialController extends Controller
 
             $requestImage->move(public_path('img/depoimento'), $imageName);
 
-            $event->image = $imageName;
+            $testimonial->image = $imageName;
 
         }
 
@@ -117,4 +117,5 @@ class TestimonialController extends Controller
     {
         //
     }
+
 }

@@ -14,7 +14,7 @@ class CreateCertificatesTable extends Migration
     public function up()
     {
         Schema::create('certificates', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('image_certificados');
             $table->string('name')->nullable();
             $table->timestamps();

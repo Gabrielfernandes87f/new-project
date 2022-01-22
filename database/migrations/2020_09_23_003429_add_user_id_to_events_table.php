@@ -14,7 +14,8 @@ class AddUserIdToEventsTable extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained();
+            $table->foreignUuid('user_id')->constrained();
+
         });
     }
 
@@ -26,7 +27,7 @@ class AddUserIdToEventsTable extends Migration
     public function down()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->foreignId('user_id')
+            $table->foreignUuid('user_id')
             ->constrained()
             ->onDelete('cascade');
         });

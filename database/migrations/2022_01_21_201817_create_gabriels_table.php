@@ -14,7 +14,7 @@ class CreateGabrielsTable extends Migration
     public function up()
     {
         Schema::create('gabriels', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->text('description');
             $table->text('description_dois');
             $table->timestamps();

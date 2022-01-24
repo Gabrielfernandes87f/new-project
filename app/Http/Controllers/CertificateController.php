@@ -39,23 +39,23 @@ class CertificateController extends Controller
     {
         $certificate = new Certificate;
 
-
-        $certificate->image_certificados = $request->title;
         $certificate->name = $request->name;
 
 
         // Image Upload
         if($request->hasFile('image_certificados') && $request->file('image_certificados')->isValid()) {
 
-            $requestImage_certificados = $request->file('image_certificados');
+            $requestImage_certificados = $request->image_certificados;
+
 
             $extension = $requestImage_certificados->extension();
 
-            $imageName = md5($requestImage_certificados->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $image_certificadosName = md5($requestImage_certificados->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            $requestImage->move(public_path('img/certificados'), $imageName);
+            $requestImage_certificados->move(public_path('img/certificados'), $image_certificadosName);
 
-            $certificate->image_certificados = $imageName;
+            $gabriel->image_certificados = $image_certificadosName;
+
 
         }
 

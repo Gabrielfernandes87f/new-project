@@ -5,13 +5,13 @@
 
 body {
   min-height: 100vh;
- 
+
   position: relative;
 }
 
 header {
   background-color: #FFF;
- 
+
 }
 
 .row {
@@ -220,7 +220,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  
+
 }
 
 footer p {

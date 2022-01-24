@@ -24,7 +24,7 @@ class GabrielController extends Controller
      */
     public function create()
     {
-        //
+        return view('gabriels.create');
     }
 
     /**
@@ -35,7 +35,41 @@ class GabrielController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        $gabriel = new Gabriel;
+
+
+
+
+        $gabriel->name = $request->name;
+
+
+
+
+        // Image Upload
+        if($request->hasFile('image_certificados') && $request->file('image_certificados')->isValid()) {
+
+            $requestImage_certificados = $request->image_certificados;
+
+
+            $extension = $requestImage_certificados->extension();
+
+            $image_certificadosName = md5($requestImage_certificados->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            $requestImage_certificados->move(public_path('img/certificados'), $image_certificadosName);
+
+            $gabriel->image_certificados = $image_certificadosName;
+
+
+        }
+
+
+
+        $gabriel->save();
+
+
+        return redirect('/')->with('msg', 'Depoimento criado com sucesso!');
     }
 
     /**

@@ -24,7 +24,7 @@ class TestimonialController extends Controller
      */
     public function create()
     {
-        //
+        return view('testimonials.create');
     }
 
     /**
@@ -40,26 +40,29 @@ class TestimonialController extends Controller
 
 
 
-        $testimonial->category = $request->category;
         $testimonial->name = $request->name;
-        $testimonial->description = $request->description;
-        $testimonial->price = $request->price;
+        $testimonial->profissao = $request->profissao;
+        $testimonial->depoimento = $request->depoimento;
+        $testimonial->instagram = $request->instagram;
+
 
 
 
 
         // Image Upload
-        if($request->hasFile('image') && $request->file('image')->isValid()) {
+        if($request->hasFile('image_testimonial') && $request->file('image_testimonial')->isValid()) {
 
-            $requestImage = $request->imageDepoimento;
+            $requestImage_testimonial = $request->image_testimonial;
 
-            $extension = $requestImage->extension();
 
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $extension = $requestImage_testimonial->extension();
 
-            $requestImage->move(public_path('img/depoimento'), $imageName);
+            $image_testimonialName = md5($requestImage_testimonial->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            $testimonial->image = $imageName;
+            $requestImage_testimonial->move(public_path('img/depoimento'), $image_testimonialName);
+
+            $testimonial->image_testimonial = $image_testimonialName;
+
 
         }
 
@@ -68,7 +71,8 @@ class TestimonialController extends Controller
 
         $testimonial->save();
 
-        return redirect('/')->with('msg', 'Evento criado com sucesso!');
+
+        return redirect('/')->with('msg', 'Depoimento criado com sucesso!');
     }
 
     /**
@@ -77,10 +81,11 @@ class TestimonialController extends Controller
      * @param  \App\Models\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function show(Testimonial $testimonial)
+    public function show($id)
     {
-        $testimonial = Testimonial::findOrFail($id);
 
+
+        $testimonial = Testimonial::findOrFail($id);
         $user = auth()->user();
     }
 

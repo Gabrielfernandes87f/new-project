@@ -28,7 +28,8 @@
             <div class="block mt-4">
                 <label class="flex items-center">
                     <input type="checkbox" class="form-checkbox" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 mt-1 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-12 ml-6 mt-1 text-sm text-gray-600"><a href="/register">Ainda não tem login?</a></span>
                 </label>
             </div>
 

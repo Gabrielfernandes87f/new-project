@@ -158,10 +158,10 @@
                 <div class="container-fluid text-center">
                     <div class="container-fluid">
                         <h5 class=" container-fluid mt-5 mb-5 font-01">
-                            "Choramos ao nascer porque chegamos a este imenso cenário de dementes."
+                            Esse site ainda ta em fase beta, vai ter muitas atualizações ainda.
                             <br>
                             <br>
-                            "Aceita o conselho dos outros, mas nunca desistas da tua própria opinião."
+                            "Pretendo postar alguns dos meus trabalhos de fotografia."
                         </h5>
                     </div>
                 </div>

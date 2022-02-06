@@ -18,11 +18,11 @@ class CreateTestimonialsTable extends Migration
             $table->foreignUuid('user_id')
             ->constrained()
             ->onDelete('cascade');
-            $table->string("name");
+            $table->string("name", 35);
             $table->string('image_testimonial')->nullable();
-            $table->string('profissao')->nullable();
-            $table->text('depoimento');
-            $table->string("instagram")->nullable();
+            $table->string('profissao', 25)->nullable();
+            $table->text('depoimento', 250);
+            $table->string("instagram", 150)->nullable();
             $table->timestamps();
         });
     }

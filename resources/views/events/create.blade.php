@@ -37,25 +37,25 @@
     </div>
     <div class="form-group">
       <label for="title">Sobre o aniversariante:</label>
-      <div class="form-group">	
+      <div class="form-group">
         <input type="checkbox" checked name="items[]" value="Um anjo"> 😇
       </div>
-      <div class="form-group">	
+      <div class="form-group">
         <input type="checkbox" name="items[]" value="love"> 😍
       </div>
-      <div class="form-group">	
+      <div class="form-group">
         <input type="checkbox" name="items[]" value="Apaixonada">  🥰
       </div>
-      <div class="form-group">	
+      <div class="form-group">
         <input type="checkbox" name="items[]" value="Meu amor"> 💕
       </div>
-      <div class="form-group">	
+      <div class="form-group">
         <input type="checkbox" name="items[]" value="corre"> 🏃
       </div>
-      <div class="form-group">	
+      <div class="form-group">
         <input type="checkbox" name="items[]" value="inteligente"> 🧠
       </div>
-      <div class="form-group">	
+      <div class="form-group">
         <input type="checkbox" name="items[]" value="encantada"> 🤩
       </div>
     </div>

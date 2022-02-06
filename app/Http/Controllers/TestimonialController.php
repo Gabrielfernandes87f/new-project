@@ -38,8 +38,6 @@ class TestimonialController extends Controller
         $testimonial = new Testimonial;
 
 
-
-
         $testimonial->name = $request->name;
         $testimonial->profissao = $request->profissao;
         $testimonial->depoimento = $request->depoimento;

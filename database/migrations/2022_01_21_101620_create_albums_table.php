@@ -15,11 +15,9 @@ class CreateAlbumsTable extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('image_capa')->nullable();
-            $table->string('image_album')->nullable();
-            $table->string("name"); // modelo, nome do casal, etc
-            $table->string("category"); // casamento, festa, etc
-            $table->text('description')->nullable(); // sobre o evento
+            $table->boolean('capa')->default('1')->nullable(); // true se for a capa do album
+            $table->text('description', 250); // sobre o evento
+            $table->string('name', 35); // modelo, nome do casal, etc
             $table->timestamps();
         });
     }

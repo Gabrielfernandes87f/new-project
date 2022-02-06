@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGabrielsTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateGabrielsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gabriels', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->text('description');
-            $table->text('description_dois');
+            $table->foreignUuid('category_id')
+            ->constrained()
+            ->onDelete('cascade');
+            $table->string('img');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateGabrielsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gabriels');
+        Schema::dropIfExists('images');
     }
 }

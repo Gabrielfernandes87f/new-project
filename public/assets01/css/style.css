@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 * Desktop Navigation
 */
 .navbar {
-  padding: 0;
+    padding: 0;
     margin-top: 15px;
 }
 
@@ -915,6 +915,10 @@ section {
 .portfolio .portfolio-wrap .portfolio-links a:hover {
   color: #7cc576;
 }
+.portfolio-links a {
+  width: 200px !important;
+  height: 200px !important;
+}
 
 .portfolio .portfolio-wrap:hover::before {
   top: 0;
@@ -1701,6 +1705,7 @@ section {
 
 #footer .copyright {
   text-align: center;
+
 }
 
 #footer .credits {

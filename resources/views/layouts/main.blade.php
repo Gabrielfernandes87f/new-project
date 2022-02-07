@@ -2,13 +2,15 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-
+@include('layouts.head')
 
 </head>
 
 <body>
 
-    <x-navbar />
+    <header id="header" class="d-flex align-items-center">
+        <x-navbar />
+  </header><!-- End Header -->
 
     <main>
         <div class=" py-4 mb-4 mt-4">
@@ -27,15 +29,11 @@
 
     <!-- FOOTER -->
 
-    <div class="container footer-bottom clearfix text-center mb-5">
-        <div class="copyright mb-5">
-            <small>Gabrielfernandesfotografias@outlook.com</small>
-        </div>
-        <div class="copyright">
-            <small>Copyright © 2022 Fotógrafo Profissional && Desenvolvedor FullStack | Powered by Gabriel
-                Fernandes</small>
-        </div>
-    </div>
+    <footer id="footer">
+        <x-footer />
+
+    </footer><!-- End Footer -->
+
 
 </body>
 

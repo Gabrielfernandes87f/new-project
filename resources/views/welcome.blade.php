@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 
 <head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
 
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    @include('layouts.head')
 </head>
 
 <body>
-    {{-- {{ dd($testimonials) }} --}}
+    <style>
+        body {
+            background-color: #ebe8e8;
+        }
+
+    </style>
+
     <!-- ======= Hero Section ======= -->
     <section id="hero">
         <div class="hero-container">
@@ -32,12 +37,13 @@
     </section><!-- End Hero -->
 
     <!-- ======= Header ======= -->
-    <x-navbar />
+    <header id="header" class="d-flex align-items-center">
+        <x-navbar />
+    </header><!-- End Header -->
 
 
     <main id="main">
 
-        <link rel="/css/main.css" href="style.css">
 
         {{-- <div class="container marketing mt-5">
                 @if (count($albums) > 0)
@@ -63,14 +69,38 @@
             }
 
             .bg-color {
-                background-color: #e8e7e7;
-                padding: 8px;
-                border-radius: 5px;
+                background-color: #ffffff;
+                padding: 5px;
+                text-align: center;
             }
 
-            .font-01 {}
+            .bg-color p,
+            h3,
+            h5 {
+                padding: 0;
+                margin: 0;
+            }
 
-            .image{
+            .bg-color p {
+                font-size: 1rem;
+                /*  mudar fonte depois */
+            }
+
+            .bg-color h5 {
+                font-size: .7rem;
+                font-weight: bold;
+                margin-top: 3px;
+            }
+
+            .bg-color .description {
+                font-size: .8rem;
+                height: 70px;
+                margin-top: 5px;
+            }
+
+
+
+            .image {
                 border-radius: 5px 5px 0 0;
             }
 
@@ -171,103 +201,107 @@
         <hr class="featurette-divider">
 
 
-        <!--EVENTOS-->
-        <div id="eventos" class="block">
-            <div class="container card-edit">
-                <h2 class="title text-center">Eventos</h2>
-                <div class="button-group mt-5 mb-5 text-center">
-                    <button type="button" class="btn btn-primary">Categoria</button>
-                    <button type="button" class="btn btn-primary">Categoria</button>
-                    <button type="button" class="btn btn-primary">Categoria</button>
+
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Portfolio</h2>
                 </div>
-                <div class="row grid">
-                    <div class="container-fluid fluid-card">
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">Todos</li>
+                            <li data-filter=".filter-casamento">Casamento</li>
+                            <li data-filter=".filter-15anos">15anos</li>
+                            <li data-filter=".filter-pre-wedding">Pre-Wedding</li>
+                            <li data-filter=".filter-ensaio">Ensaio fotografico</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-pre-wedding">
+                        <div class="portfolio-wrap">
+                            <img src="/image/GSF_0390.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <p>Ver album</p>
+                                <div class="portfolio-links">
+                                    <a href="/albums" ></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-4 mb-4  element-item ballet ensaio">
-                            <a href="#" class="popup-link">
-                                <img src="/image/GSF_0390.jpg" class="img-fluid image" />
-                            </a>
-                            <div class="bg-color mb-5">
-                                <p>Nome: Gabriel</p>
-                                <h5 class="mb-1">Categoria: categoria</h5>
+                            <div class="bg-color">
+                                <p>Renally chagas</p>
+                                <h5 class="">Pré-wedding</h5>
+                                <p class="description">Tudo o que um sonho precisa para ser realizado é alguém que
+                                    acredite que ele possa ser realizado.</p>
                             </div>
                         </div>
                     </div>
 
+
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-casamento">
+                        <div class="portfolio-wrap">
+                            <img src="/image/GSF_0359.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <p>Ver album</p>
+                                <div class="portfolio-links">
+                                    <a href="/albums" ></a>
+                                </div>
+                            </div>
+                            <div class="bg-color">
+                                <p>Renally chagas</p>
+                                <h5 class="">Casamento</h5>
+                                <p class="description">Tudo o que um sonho precisa para ser realizado é.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-ensaio">
+                        <div class="portfolio-wrap">
+                            <img src="/image/GSF_2714.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                            <div class="portfolio-info">
+                                <p>Ver album</p>
+                                <div class="portfolio-links">
+                                    <a href="/albums" ></a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="bg-color">
+                                <p>Lurdinha</p>
+                                <h5 class="">Ensaio fotografico</h5>
+                                <p class="description">Tudo o que um sonho precisa para ser realizado é alguém que
+                                    acredite que ele possa ser realizado.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-15anos">
+                        <div class="portfolio-wrap">
+                            <img src="/image/GSF_0390.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <p>Ver album</p>
+                                <div class="portfolio-links">
+                                    <a href="/albums" ></a>
+                                </div>
+                            </div>
+                            <div class="bg-color">
+                                <p>Lurdinha</p>
+                                <h5 class="">Ensaio fotografico</h5>
+                                <p class="description">Tudo o que um sonho precisa para ser realizado é alguém que
+                                    acredite que ele possa ser realizado.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-        </div>
+        </section><!-- End Portfolio Section -->
 
 
 
@@ -339,16 +373,6 @@
 
 
 
-
-    <script src="/assets01/vendor/aos/aos.js"></script>
-    <script src="/assets01/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets01/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="/assets01/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="/assets01/vendor/php-email-form/validate.js"></script>
-    <script src="/assets01/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="/assets01/js/main.js"></script>
 
 
 </body>

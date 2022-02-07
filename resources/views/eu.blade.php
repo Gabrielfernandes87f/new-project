@@ -4,6 +4,7 @@
 
 @section('content')
 
+
     <style>
         .banner-eu {
             border-radius: 30px;
@@ -12,12 +13,16 @@
 
         }
 
+        body {
+            background-color: #ebe8e8;
+        }
+
     </style>
 
-    <div class="container-fluid text-center mt-5">
+    <div class="container-fluid text-center">
     </div>
 
-    <div class="container-fluid text-center mt-5">
+    <div class="container-fluid text-center">
         <div class="row">
             <div class="card">
                 <h1 class="card-title">Gabriel Fernandes</h1>

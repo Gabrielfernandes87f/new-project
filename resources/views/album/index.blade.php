@@ -4,6 +4,7 @@
     Album
 @endsection --}}
 @section('content')
+
     <Style>
         .card-img {
             width: 720;
@@ -84,17 +85,30 @@
         }
 
         .title-principal {
-
-            font-weight: bold;
+            font-size: .9em;
+            font-weight: 500;
             color: #000;
+            margin-top: -50px;
+            margin-bottom: -50px;
 
         }
+        .title-local {
+            font-weight: bold;
+            color: #000;
+        }
+
+        body {
+            background-color: #ebe8e8;
+        }
+        #header {
+    height: 30px;
+}
+
 
     </Style>
 
-    <hr class="featurette-divider mt-4 mb-5">
 
-    <div class="container-fluid text-center mt-5 mb-5">
+    <div class="container-fluid text-center">
         <h4 class="title-principal">"Eu realmente acredito que há coisas que ninguém veria se eu não as
             fotografasse."</h4>
     </div>
@@ -108,7 +122,7 @@
                         <h3>
                             Renally chagas
                         </h3>
-                        <p class="title-principal">
+                        <p class="title-local">
                             Praia de Tambaba, Conde PB.
                         </p>
                         <p>

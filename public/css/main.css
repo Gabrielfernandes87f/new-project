@@ -1,4 +1,6 @@
-h2.h2-hea {
-    background-color: cornflowerblue !important;
-    color: crimson !important;
+        body {
+    background-color: #ebe8e8;
+}
+#header {
+    height: 30px;
 }

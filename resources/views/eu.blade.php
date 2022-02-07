@@ -37,7 +37,7 @@
                     <img src="/image/_RSF7724.jpg" class="img-fluid banner-eu" alt="">
                 </div>
             </div>
-            <h3 class="text-center">Um pouco sobre mim</h3>
+            <h3 class="text-center mt-3">Um pouco sobre mim</h3>
             <p class="description text-success container-fluid mt-3 flex-wap">
 
                 😉 Oi, me chamo Gabriel, tenho 34 anos, há dois anos comecei a estudar programação. Antes trabalhava como

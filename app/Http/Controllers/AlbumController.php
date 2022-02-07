@@ -23,12 +23,12 @@ class AlbumController extends Controller
     public function index(Request $request)
     {
         $albums = Album::all();
-        $carts = Cart::all();
+      //  $carts = Cart::all();
         $categories = Category::all();
         $users = User::all();
         $images = Image::all();
 
-        return view('album.index', compact('albums', 'carts', 'categories', 'users', 'images'));
+        return view('album.index', compact('albums', /* 'carts', */ 'categories', 'users', 'images'));
     }
 
     public function dashboard(Request $request)

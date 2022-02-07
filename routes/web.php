@@ -41,12 +41,7 @@ Route::put('/events/update/{id}', [EventController::class, 'update'])->middlewar
  //
 // Route::resource(name: 'testimonial', controller: TestimonialController::class)->only(['index', 'show', 'create', 'store']->middleware('auth'));
  //
- Route::group(['middleware' => ['auth']], function () {
 
-     Route::post('/testimonials', [TestimonialController::class, 'store']);
-     Route::get('/testimonials/create', [TestimonialController::class, 'create']);
-     Route::get('/testimonials/{id}', [TestimonialController::class, 'show']);
-});
 
  // Route::get('/testimonial/create', [TestimonialController::class, 'create'])->middleware('auth');
  // Route::get('/testimonial/{id}', [TestimonialController::class, 'show']);
@@ -84,6 +79,18 @@ Route::delete('/events/leave/{id}', [EventController::class, 'leaveEvent'])->mid
  // Route::get('/depoimentos/create', [DepoimentoController::class, 'createDepoimento'])->middleware('auth');
 
 //  Route::get('/testimonial', [TestimonialController::class, 'store']);
+/* Route::group(['middleware' => ['auth']], function () {
+
+    Route::post('/testimonials', [TestimonialController::class, 'store']);
+    Route::get('/testimonials/create', [TestimonialController::class, 'create']);
+    Route::get('/testimonials/{id}', [TestimonialController::class, 'show']);
+}); */
+
+
+Route::resource('testimonials', TestimonialController::class)->only([
+    'index', 'edit', 'show', 'create', 'store', 'update', 'destroy'
+]);
+
 
 
 Route::resource('albums', AlbumController::class)->only([

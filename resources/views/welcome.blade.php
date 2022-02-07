@@ -27,12 +27,12 @@
             <h1 data-aos="zoom-in">Gabriel fernandes</h1>
             <p><strong>Desenvolvedor FullStack/DevOps</strong></p>
             <p><strong>Laravel - ✔</strong></p>
-            @if (session('msg'))
+{{--             @if (session('msg'))
                 <a data-aos="fade-up" data-aos-delay="200" href="/" class="btn-get-started">{{ session('msg') }}</a>
             @else
                 <a data-aos="fade-up" data-aos-delay="200" href="/testimonials/create" class="btn-get-started ">Deixe seu
                     Feedback</a>
-            @endif
+            @endif --}}
         </div>
     </section><!-- End Hero -->
 

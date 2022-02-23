@@ -24,15 +24,10 @@
             <h2 data-aos="fade-up">
                 <p><strong>Fotógrafo Profissional</strong></p>
             </h2>
-            <h1 data-aos="zoom-in">Gabriel fernandes</h1>
+            <h1 data-aos="zoom-in">Gabriel Fernandes</h1>
             <p><strong>Desenvolvedor FullStack/DevOps</strong></p>
             <p><strong>Laravel - ✔</strong></p>
-{{--             @if (session('msg'))
-                <a data-aos="fade-up" data-aos-delay="200" href="/" class="btn-get-started">{{ session('msg') }}</a>
-            @else
-                <a data-aos="fade-up" data-aos-delay="200" href="/testimonials/create" class="btn-get-started ">Deixe seu
-                    Feedback</a>
-            @endif --}}
+
         </div>
     </section><!-- End Hero -->
 
@@ -43,23 +38,7 @@
 
 
     <main id="main">
-
-
-        {{-- <div class="container marketing mt-5">
-                @if (count($albums) > 0)
-                <div class="row ">
-              @foreach ($albums as $album)
-            <div class="col-lg-4 image-main-capa">
-                <p><a href="/albums/{{ $album->id }}" role="button" >
-                     <img src="/img/album-capa/{{ $album->image_capa }}" class="bd-placeholder-img" width="200" role="img" alt="foto-capa">
-                </a></p>
-              <h2 class="name-image">{{ $album->name }}</h2>
-              <p class="description">{{ $album->description }}</p>
-              <p class="ver-galeria"><a class="btn btn-secondary" href="/albums/{{ $album->id }}" role="button">Ver album &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            @endforeach
-        </div><!-- /.row -->
-        @endif --}}
+s'
         <Style>
             .card-img {
                 width: 720;
@@ -170,6 +149,10 @@
 
             }
 
+            .desc-profissoes {
+                text-align: justify;
+            }
+
         </Style>
 
 
@@ -188,7 +171,7 @@
                 <div class="container-fluid text-center">
                     <div class="container-fluid">
                         <h5 class=" container-fluid mt-5 mb-5 font-01">
-                            Esse site ainda ta em fase beta, vai ter muitas atualizações ainda.
+                            Esse site ainda tá em fase beta!
                             <br>
                             <br>
                             "Pretendo postar alguns dos meus trabalhos de fotografia."
@@ -199,6 +182,196 @@
         </div>
 
         <hr class="featurette-divider">
+
+
+        <section id="faq" class="faq">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Perguntas Frequentes</h2>
+                </div>
+
+                <ul class="faq-list">
+
+                    <li data-aos="fade-up">
+                        <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">
+                            Tem faculdade?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+                        <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Não tenho, sou autodidata. Estudo sozinho, todos os dias.
+                                Estou sempre fazendo um novo curso, tudo com foco e disciplina.
+
+
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">
+                            Hoje você se vê com qual profissão? ou qual tem mais haver com você?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+                        <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Sou engenheiro de software, estou trabalhando como freelancer, desenvolvendo sites.
+                                Não estou atuando mais como Fotógrafo. Estou focado em construir uma carreira
+                                profissional como
+                                programador.
+                                investimento e day trade, não quero fazer disso profissão. Profissão pra mim é na área
+                                programação.
+
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">
+                            Você tem alguma experiência como programador?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+                        <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ainda nao tenho experiência com programação, meu foco é mais em estudar, que procurar
+                                trabalho.
+                                já fiz vários projetos, esse site é mais um dos meus projetos, o primeiro site que eu
+                                fiz,
+                                foi em WorldPress.
+
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">
+                            Como se vê daqui a 5 anos?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+                        <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Pretendo está atuando como programador fullstack,
+                                devOps ('gostei muito de fazer deploy') e fotografando por hobby.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">
+                            Como você descobriu que gostava de programar? como foi seu primeiro contato?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+                        <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                comecei com python, fiz muitos projetinhos com python. gostava muito de uma biblioteca
+                                chamada Charttbot. Era minha inteligencia artificial de if e else, gostava muito.
+                                depois de alguns meses de estudo, eu decidi fazer um curso de programação.
+                                foi ai que entrei na rocketseet foi primeiro contato com programação web.
+                                conheci algumas linguagens, HTML5, CSS3 e javascript.
+
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">
+                            Qual a sua principal linguagem de programação ou principal framework?
+                            <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+                        <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Com certeza é laravel, eu gostei muito de fazer projetos com ele.
+                                Laravel foi o framework que me colocou como desenvolvedor fullstack.
+
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section><!-- End Frequently Asked Questions Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Profissão</h2>
+                    <p>
+                        Algumas das minhas principais profissões
+                    </p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="zoom-in">
+                            <div class="member-img">
+                                <img src="assets01/img/team/team-1.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <h3 class="text-center">
+                                        Gabriel Fernandes
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4 class="text-center">Fotógrafo</h4>
+                                <span class="text-center">Fotógrafo profissional</span>
+                                <p class="desc-profissoes">
+                                    Fotógrafo profissional com mais de 8 anos de experiência no mercado.
+                                    Fotografia de casamento, festa de 15 anos, formaturas e ensaio externos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="assets01/img/team/team-2.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <h3 class="text-center">
+                                        Gabriel Fernandes
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4 class="text-center">Desenvolver fullStack/DevOps</h4>
+                                <span class="text-center">Engenharia de software</span>
+                                <p class="desc-profissoes">
+                                    Desenvolver fullStack/DevOps
+                                    com mais de 1 ano e meio de experiência.
+                                    Desenvolvimento de sistemas web, integração de sistemas.
+                                    Deploy de sistemas em Laravel.
+                                    Estudando deploy de aplicação Node.
+                                    foco em desenvolvimento de aplicação Laravel.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="member-img">
+                                <img src="assets01/img/team/team-3.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <h3 class="text-center">
+                                        Gabriel Fernandes
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4 class="text-center">Investidor/DayTrader</h4>
+                                <span class="text-center">Investidor/DayTrader</span>
+                                <p class="desc-profissoes">
+                                    Comecei no início da pandemia em opções, ganhei e perdi...
+                                    Aprendi a trabalhar como Day trade na bolsa de valores.
+                                    Por fim, eu parei de fazer trade e comecei a investir em ações, na Nasdaq
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
 
 
 
@@ -231,7 +404,7 @@
                             <div class="portfolio-info">
                                 <p>Ver album</p>
                                 <div class="portfolio-links">
-                                    <a href="/albums" ></a>
+                                    <a href="/albums"></a>
                                 </div>
                             </div>
                             <div class="bg-color">
@@ -251,7 +424,7 @@
                             <div class="portfolio-info">
                                 <p>Ver album</p>
                                 <div class="portfolio-links">
-                                    <a href="/albums" ></a>
+                                    <a href="/albums"></a>
                                 </div>
                             </div>
                             <div class="bg-color">
@@ -265,12 +438,12 @@
                         <div class="portfolio-wrap">
                             <img src="/image/GSF_2714.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                            <div class="portfolio-info">
-                                <p>Ver album</p>
-                                <div class="portfolio-links">
-                                    <a href="/albums" ></a>
+                                <div class="portfolio-info">
+                                    <p>Ver album</p>
+                                    <div class="portfolio-links">
+                                        <a href="/albums"></a>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <div class="bg-color">
                                 <p>Lurdinha</p>
@@ -287,7 +460,7 @@
                             <div class="portfolio-info">
                                 <p>Ver album</p>
                                 <div class="portfolio-links">
-                                    <a href="/albums" ></a>
+                                    <a href="/albums"></a>
                                 </div>
                             </div>
                             <div class="bg-color">
@@ -304,65 +477,6 @@
         </section><!-- End Portfolio Section -->
 
 
-
-        <div id="testimonial" class="block">
-            <div class="container">
-                <h2 class="title text-center">Feedback</h2>
-                <div class="row">
-                    @foreach ($testimonials as $testimonial)
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <a href="#" target="_blank">
-                                <div class="card h-100">
-                                    <div class="card-body testimonial-body">
-                                        <div class="text-center">
-                                            <img class="card-img-fluid img-fluid rounded-circle text-center"
-                                                src="/img/depoimento/{{ $testimonial->image_testimonial }}"
-                                                width="50%" alt="">
-                                        </div>
-                                        <h4 class="card-title text-center">{{ $testimonial->name }}</h4>
-                                        <p class="card-text testimonial-profissao text-center">
-                                            {{ $testimonial->profissao }}</p>
-                                        <p class="card-text container-fluid">
-                                            “{{ $testimonial->depoimento }}”
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                    {!! $testimonials->links() !!}
-                </div>
-            </div>
-        </div>
-
-        <!--//EVENTOS-->
-        {{-- @if (count($albums) > 0)
-      @foreach ($albums as $album)
-    <div class="col-md-3 mb-5">
-        <div class="wsk-cp-product">
-          <div class="wsk-cp-img">
-              <a href="#">
-                  <img src="image/samuel/1.jpeg" alt="">
-              </a>
-          </div>
-          <div class="wsk-cp-text">
-            <div class="wsk-cp-content">
-                 <h3 class="wsk-cp-title">{{ $album->category }} </h3>
-                 <p class="wsk-cp-description">{{ $album->description }}</p>
-                 <a href="#" class="btn btn-primary text-center">Ver album</a>
-            </div>
-          </div>
-        </div>
-    </div>
-    @endforeach
-    @endif --}}
-
-        <div class="container">
-
-        </div>
-        <hr class="featurette-divider">
-
-
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -370,10 +484,6 @@
         <x-footer />
 
     </footer><!-- End Footer -->
-
-
-
-
 
 </body>
 
